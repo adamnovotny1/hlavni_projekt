@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d3cbdd0-fe75-40cc-a7e8-a00bd790b1b6" name="Changes" comment="Vytvoření base presenteru a základní css">
-      <change afterPath="$PROJECT_DIR$/static/img/ds2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/future.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="3d3cbdd0-fe75-40cc-a7e8-a00bd790b1b6" name="Changes" comment="Vytvoření index.html a přidání obrázků" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1739794162577</updated>
-      <workItem from="1739794163670" duration="1826000" />
+      <workItem from="1739794163670" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="Vytvoření základních složek a souborů">
       <option name="closed" value="true" />
@@ -108,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739795375394</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Vytvoření index.html a přidání obrázků">
+      <option name="closed" value="true" />
+      <created>1739796296538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739796296538</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +142,8 @@
     <MESSAGE value="Vytvoření základních složek a souborů" />
     <MESSAGE value="Vytvoření app route pro index.html" />
     <MESSAGE value="Vytvoření base presenteru a základní css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vytvoření base presenteru a základní css" />
+    <MESSAGE value="Vytvoření index.html a přidání obrázků" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vytvoření index.html a přidání obrázků" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hlavni_projekt$main.coverage" NAME="main Coverage Results" MODIFIED="1739795388950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
