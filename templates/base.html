@@ -13,7 +13,15 @@
         <li><a href="{{ url_for('login') }}">Přihlásit se</a></li>
     </ul>
 </nav>
-<hr>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    <ul>
+    {% for category, message in messages %}
+        <label for="flash"><li class="flash_message {{ category }}">{{ message }}<input type="checkbox" id="flash" name="X" /></li></label>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
 <div class="content">
     {% block content %} {% endblock %}
 </div>

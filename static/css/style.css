@@ -69,3 +69,19 @@ p {
     margin-bottom: 15px;
     text-align: justify;
 }
+
+.warning {
+    background-color: yellow;
+    color: black;
+}
+
+.message {
+    background-color: green;
+    color: black;
+}
+#flash{
+    display: none;
+}
+li:has(> input:checked) {
+    display: none;
+}
