@@ -6,7 +6,6 @@
     {% endblock %}
 </h2>
 <main>
-    {% if login != True %}
     <form method="post">
 
         <label>Uživatelské jméno:
@@ -20,13 +19,6 @@
         <input type="submit" value="Odeslat">
 
     </form>
-    {% endif %}
-
-    {% if login == True %}
-        <h3>Úspešné přihlášení uživatele {{username}}</h3>
-    {% elif login == False %}
-        <h3>Špatné jméno nebo heslo</h3>
-    {% endif %}
 </main>
 
 {% endblock %}
