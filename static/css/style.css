@@ -82,6 +82,9 @@ p {
 #flash{
     display: none;
 }
+li{
+    list-style-type: none;
+}
 li:has(> input:checked) {
     display: none;
 }
