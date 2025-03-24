@@ -10,10 +10,24 @@
 <nav class="menu">
     <ul>
         <li><a href="{{ url_for('index') }}">Domů</a></li>
-        <li><a href="{{ url_for('login') }}">Přihlásit se</a></li>
-        <li><a href="{{ url_for('register') }}">Registrace</a></li>
+        {% if session["username"] %}
+        <li><a href="{{ url_for('auth.logout') }}">Odhlásit se</a></li>
+        {%else %}
+        <li><a href="{{ url_for('auth.login') }}">Přihlásit se</a></li>
+        <li><a href="{{ url_for('auth.register') }}">Registrace</a></li>
+        {% endif %}
     </ul>
 </nav>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
 <hr>
 <div class="content">
     {% block content %} {% endblock %}
