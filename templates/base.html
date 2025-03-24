@@ -11,6 +11,8 @@
     <ul>
         <li><a href="{{ url_for('index') }}">Domů</a></li>
         {% if session["username"] %}
+        <li><a href="{{ url_for('playlist.index') }}">Playlist</a></li>
+        <li><a href="{{ url_for('auth.user') }}">Uživatel</a></li>
         <li><a href="{{ url_for('auth.logout') }}">Odhlásit se</a></li>
         {%else %}
         <li><a href="{{ url_for('auth.login') }}">Přihlásit se</a></li>

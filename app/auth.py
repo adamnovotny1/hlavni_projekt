@@ -1,6 +1,7 @@
 from plistlib import dumps
 
 from flask import Blueprint, render_template, request, session, flash, url_for, redirect
+from functools import wraps
 from app.db import execute
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
@@ -19,8 +20,10 @@ def login():
         if result:
             session["username"] = username
             flash("Login succesful")
+            return redirect(url_for('index'))
         else:
             flash("Login unsuccessful","warning")
+
     return render_template("login.html")
 
 @bp.route('/logout')
@@ -61,3 +64,21 @@ def register():
             flash("registrace neproběhla úspěšně","error")
 
     return render_template('register.html')
+
+def log_required():
+    if "username" not in session:
+        flash("sekce pouze pro přihlášené uživatele")
+        return redirect(url_for('auth.login'))
+
+def login_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if "username" not in session:
+            flash("sekce pro přihlášené uživatele")
+            return redirect(url_for("auth.login"))
+        return func(*args, **kwargs)
+    return wrapper
+
+@bp.route('/user')
+def user():
+    return render_template("user.html")
