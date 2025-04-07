@@ -1,7 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
     <main>
-        <h1>{% block title %}Playlist{% endblock %}</h1>
-        <h3>Playlist</h3>
+        <h1>{% block title %}Playlist uživatele {{username}}{% endblock %}</h1>
+        <a href="{{ url_for('playlist.add') }}">Přidat</a>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Jméno</th>
+                <th>Interpret</th>
+                <th>Album</th>
+                <th>Žánr</th>
+                <th>Akce</th>
+                <th>Akce</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for song in songs %}
+                <tr>
+                    <td>{{ song[0] }}</td>
+                    <td>{{ song[1] }}</td>
+                    <td>{{ song[2] }}</td>
+                    <td>{{ song[3] }}</td>
+                    <td>{{ song[4] }}</td>
+                    <td><a href="{{ url_for('playlist.delete', song_id = song[0]) }}">Smazat </a></td>
+                    <td><a href="{{ url_for('playlist.edit', song_id = song[0]) }}">Upravit</a></td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     </main>
 {% endblock %}

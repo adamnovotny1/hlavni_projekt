@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <h1>{% block title %} Administrace {% endblock %}</h1>
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Jméno</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Akce</th>
+                <th>Akce</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>{{ user[4] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </main>
+{% endblock %}
