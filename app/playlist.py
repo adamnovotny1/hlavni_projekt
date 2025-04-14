@@ -25,9 +25,9 @@ def index():
 @bp.route('/add', methods=['GET', 'POST'])
 def add():
     """
-    Obsluhuje registraci nového uživatele.
+    Obsluhuje přidání nové písničky.
     Returns:
-        HTML stránka pro registraci nebo přesměrování na přihlašovací stránku.
+        HTML stránka pro přidání písničky nebo přesměrování na přidávací stránku.
     """
     if request.method == 'POST':
         name = request.form['name']
@@ -48,10 +48,14 @@ def add():
 @login_required
 def delete(song_id):
     """
-
-    """
+        Obsluhuje smazání písničky.
+        Returns:
+            přesměrování na playlist stránku.
+        """
+    song = execute('SELECT * FROM playlist WHERE user_id = ? AND id = ?', (user_id,song_id,))
+    print(song)
     command = "DELETE FROM playlist WHERE id = ? AND user_id = ?"
-    print(song_id)
+
     execute(command, (song_id, session["id"]))
     flash("Písnička byla úspěšně odstraněna", "success")
     return redirect(url_for('playlist.index'))
@@ -61,8 +65,20 @@ def delete(song_id):
 @login_required
 def edit(song_id):
     """
+        Stránka pro úpravu písničky s doplňenými hodnotami.
 
-    """
+        Returns:
+            vrácení na zpět
+            vygenerování formuláře pro editaci písničky
+
+        """
+    user_id = session["id"]
+    song = execute('SELECT * FROM playlist WHERE user_id = ? AND id = ?', (user_id, song_id,))
+
+    if song and song[0][5] != user_id:
+        flash("Toto není vaše písnička", "error")
+        return redirect(url_for('playlist.index'))
+
     if request.method == 'POST':
         name = request.form['name']
         artist = request.form['artist']

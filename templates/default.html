@@ -20,6 +20,8 @@
                     <td>{{ user[1] }}</td>
                     <td>{{ user[2] }}</td>
                     <td>{{ user[4] }}</td>
+                    <td><a href="{{ url_for('admin.delete', user_id = user[0]) }}">Smazat </a></td>
+                    <td><a href="{{ url_for('admin.edit_user', user_id = user[0]) }}">Upravit</a></td>
                 </tr>
             {% endfor %}
         </tbody>

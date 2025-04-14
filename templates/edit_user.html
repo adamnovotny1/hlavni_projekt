@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>
+    {% block title %}
+    Úprava uživatele {{user[0][2]}}
+    {% endblock %}
+</h2>
+<main>
+        <form method="POST">
+            <label for="username">Jméno</label>
+            <input type="text" id="username" name="username" value="{{user[0][1]}}" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" value="{{user[0][2]}}" required>
+
+            <label for="role">Role</label>
+            <input type="text" id="role" name="role" value="{{user[0][4]}}" required>
+
+            <label for="password">Heslo</label>
+            <input type="password" id="password" name="password" value="{{user[0][3]}}" required>
+
+            <label for="password2">Zadejte heslo znovu</label>
+            <input type="password" id="password2" name="password2" value="{{user[0][3]}}" required>
+
+            <input type="submit" value="Upravit">
+        </form>
+</main>
+{% endblock %}

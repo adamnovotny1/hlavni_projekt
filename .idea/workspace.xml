@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d3cbdd0-fe75-40cc-a7e8-a00bd790b1b6" name="Changes" comment="Vytvoření funkce která kontoruluje přihlášení uživatele">
-      <change afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/37634685-87e6-450d-b9fc-ea2973841b67.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/37634685-87e6-450d-b9fc-ea2973841b67.xml" afterDir="false" />
+    <list default="true" id="3d3cbdd0-fe75-40cc-a7e8-a00bd790b1b6" name="Changes" comment="Administrace, mazání a úprava písniček">
+      <change afterPath="$PROJECT_DIR$/templates/edit_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/playlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/playlist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheme.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scheme.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/playlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/playlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +160,11 @@
       <workItem from="1744024761786" duration="371000" />
       <workItem from="1744025163006" duration="2317000" />
       <workItem from="1744027653191" duration="932000" />
+      <workItem from="1744028623628" duration="481000" />
+      <workItem from="1744102419130" duration="1193000" />
+      <workItem from="1744613281417" duration="3589000" />
+      <workItem from="1744623882112" duration="164000" />
+      <workItem from="1744628205064" duration="3057000" />
     </task>
     <task id="LOCAL-00001" summary="Vytvoření základních složek a souborů">
       <option name="closed" value="true" />
@@ -232,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742823421637</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Administrace, mazání a úprava písniček">
+      <option name="closed" value="true" />
+      <created>1744029042353</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744029042353</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +276,11 @@
     <MESSAGE value="Inicializace databáze a vytvoření logiky pro registraci uživatelů" />
     <MESSAGE value="Úprava databáze a autentikační logiky" />
     <MESSAGE value="Vytvoření funkce která kontoruluje přihlášení uživatele" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vytvoření funkce která kontoruluje přihlášení uživatele" />
+    <MESSAGE value="Administrace, mazání a úprava písniček" />
+    <option name="LAST_COMMIT_MESSAGE" value="Administrace, mazání a úprava písniček" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/hlavni_projekt$main.coverage" NAME="main Coverage Results" MODIFIED="1744028535312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hlavni_projekt$main.coverage" NAME="main Coverage Results" MODIFIED="1744628224599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hlavni_projekt$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1742804739026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

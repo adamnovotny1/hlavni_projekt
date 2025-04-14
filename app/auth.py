@@ -20,10 +20,9 @@ def login():
         command = "SELECT user, role, id FROM users WHERE user = ? AND password = ?"
 
         result = execute(command, (username, password))
-
         if result:
             session["username"] = username
-            session["role"] = "admin"
+            session["role"] = result[0][1]
             session["id"] = result[0][2]
 
             flash("Login succesful")
@@ -105,15 +104,16 @@ def login_required(func):
 
 def admin_required(func):
     """
-    Dekorátor pro ochranu stránek, které jsou dostupné pouze pro přihlášené uživatele.
+    Dekorátor pro ochranu stránek, které jsou dostupné pouze pro admina.
     Args:
-        Funkce, kterou chceme chránit před přístupem nepřihlášených uživatelů.
+        Funkce, kterou chceme chránit před přístupem uživatelů s jinou rolí.
 
     Returns:
         Wrapper, který buď zavolá původní funkci, nebo přesměruje uživatele.
     """
     @wraps(func)
     def wrapper(*args, **kwargs):
+
         if session["role"] != "admin" :
             flash("Sekce pouze pro Administrátora", "error")
             return redirect(url_for("index"))
